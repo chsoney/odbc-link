@@ -49,7 +49,7 @@ realloc_conns(void)
 		return 0;
 
 	memcpy(new_conns, conns, n_conn * sizeof(odbcconn));
-	if (conns)
+	if (n_conn && conns)
 		pfree(conns);
 
 	conns = new_conns;
